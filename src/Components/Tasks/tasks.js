@@ -56,19 +56,14 @@ class Task extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createNewAuthor: (taskName) => {
-      dispatch({
-        type: 'TASK_CREATE',
-        payload: taskName,
-      });
-    },
-    updateAuthor: (taskName, id) => {
+
+    updateTask: (taskName, id) => {
       dispatch({
         type: 'TASK_UPDATE',
         payload: { title: taskName, id },
       });
     },
-    deleteAuthor: (id) => {
+    deleteTask: (id) => {
       dispatch({
         type: 'TASK_DELETE',
         payload: id,

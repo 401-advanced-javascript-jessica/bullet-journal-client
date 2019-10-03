@@ -1,10 +1,7 @@
 export default (state = [], { type, payload }) => {
   switch (type) {
     case 'TASK_CREATE':
-      return [...state, {
-        name: payload,
-      },
-      ];
+      return [...state, payload];
     case 'TASK_UPDATE':
       return state.map(() => {
         return state;
