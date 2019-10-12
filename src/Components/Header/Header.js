@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 
 class Header extends React.Component {
     handleLogin = (event) => {
-
     };
 
     handleSignup = (event) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Form from './Components/Form/Form';
-import Header from './Components/Header/Header';
+import Auth from './Components/Auth/Auth';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Header />
+        <Auth />
         {
           this.props.tasks.map((task, idx) => (
               <li key={idx}>
@@ -35,11 +35,12 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
   return {
     tasks: state.tasks,
+    isAuthenticated: state.isAuthenticated,
   };
 };
 
 export default connect(mapStateToProps)(App);
 
 App.propTypes = {
-  tasks: PropTypes.object,
+  tasks: PropTypes.array,
 };
